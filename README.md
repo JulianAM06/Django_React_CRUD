@@ -22,6 +22,7 @@ Antes de ejecutar el servidor del backend, realimos la conexion a la base de dat
 4. En la linea 86, se realiza la conexion a la base de datos de acuerdo a los parametros de su Postgres =>
 DATABASES = {
     'default': {
+   
         'ENGINE': 'django.db.backends.postgresql', => Esta linea se deja igual
    
         'NAME': 'xxxxx', => Nombre de la base de datos creada
