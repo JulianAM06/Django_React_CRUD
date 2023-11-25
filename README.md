@@ -23,10 +23,15 @@ Antes de ejecutar el servidor del backend, realimos la conexion a la base de dat
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql', => Esta linea se deja igual
+   
         'NAME': 'xxxxx', => Nombre de la base de datos creada
+   
         'USER': 'xxxxx', => Nombre de su usuario
+   
         'PASSWORD': 'xxxxx', => Contraseña de su Postgres
+   
         'PORT': 'localhost', => Esta linea se deja igual
+   
         'PORT': 5432 => Esta linea se deja igual
     }
 }
