@@ -14,9 +14,35 @@ Ejecucion del Backend, realizado en Django Rest Framework:
 10. pip install djoser => Conexion atraves de AXIOS  
 11. pip install coreapi => Documentacion de la API
 12. pip install psycopg2 => Conexion a la Base de Datos Postgres
-13. python manage.py runserver 8000 => Ejecutamos el servidor local, importante realizar la conexion del Backend al puerto 8000, ya que el Frontend esta conectado a dicho puerto
-14. http://127.0.0.1:8000/tareas/api/v1/tareas/ => Vamos a esta ruta para visualizar el Backend
-15. http://127.0.0.1:8000/tareas/docs/ => Para visualizar la docuemntacion de la API
+
+Antes de ejecutar el servidor del backend, realimos la conexion a la base de datos de Postgres:
+1. Creamos la base de datos en Postgres
+2. En Visual Studio Code, vamos a la carpeta myProjectApi
+3. Abrimos settings.py
+4. En la linea 86, se realiza la conexion a la base de datos de acuerdo a los parametros de su Postgres =>
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql', => Esta linea se deja igual
+        'NAME': 'xxxxx', => Nombre de la base de datos creada
+        'USER': 'xxxxx', => Nombre de su usuario
+        'PASSWORD': 'xxxxx', => Contraseña de su Postgres
+        'PORT': 'localhost', => Esta linea se deja igual
+        'PORT': 5432 => Esta linea se deja igual
+    }
+}
+
+Luego de realizar esta configuracion, guardamos cambios y en la terminal ejecutamos:
+
+5. python manage.py makemigrations
+6. python manage.py migrate
+
+Con esto ya estaria lista la conexion de Django Rest Framework a Postgres, la tabla que va almacenar los datos del CRUD se llama myAppAuth_tareas
+
+Ahora continuamos con los pasos para terminar la conexion del backend =>
+
+14. python manage.py runserver 8000 => Ejecutamos el servidor local, importante realizar la conexion del Backend al puerto 8000, ya que el Frontend esta conectado a dicho puerto
+15. http://127.0.0.1:8000/tareas/api/v1/tareas/ => Vamos a esta ruta para visualizar el Backend
+16. http://127.0.0.1:8000/tareas/docs/ => Para visualizar la docuemntacion de la API
 
 Ejecucion del Frontend, realizado con React:
 
